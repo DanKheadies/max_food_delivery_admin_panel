@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "120357826866",
+    "project_id": "max-food-delivery-app",
+    "storage_bucket": "max-food-delivery-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120357826866:android:7140a06ba48e54ed9ba72b",
+        "android_client_info": {
+          "package_name": "com.DTFun.max_food_delivery_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120357826866-prfvhad33n7brrplo84vsk9fefrkaotb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF1YMcjI9k3j4-Pe-1OFzGE_1LI1RqEo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120357826866-prfvhad33n7brrplo84vsk9fefrkaotb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "120357826866-2a8vcl1409p2jql3ad60osg4lumc7iq3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.maxFoodDeliveryApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120357826866:android:706e5e15e0d4de529ba72b",
+        "android_client_info": {
+          "package_name": "com.example.max_food_delivery_admin_panel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120357826866-prfvhad33n7brrplo84vsk9fefrkaotb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF1YMcjI9k3j4-Pe-1OFzGE_1LI1RqEo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120357826866-prfvhad33n7brrplo84vsk9fefrkaotb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "120357826866-2a8vcl1409p2jql3ad60osg4lumc7iq3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.maxFoodDeliveryApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
