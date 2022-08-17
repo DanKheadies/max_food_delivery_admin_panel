@@ -24,7 +24,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
 
     _restaurantSubscription =
         _restaurantRepository.getRestaurant().listen((restaurant) {
-      print(restaurant);
+      // print(restaurant);
       add(
         LoadSettings(
           restaurant: restaurant,
