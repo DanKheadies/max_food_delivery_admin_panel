@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
           initialRoute: '/menu',
           routes: {
             '/menu': (context) => const MenuScreen(),
-            // '/dash': (context) => const DashboardScreen(),
+            '/dashboard': (context) => const DashboardScreen(),
             '/settings': (context) => const SettingsScreen(),
           },
         ),

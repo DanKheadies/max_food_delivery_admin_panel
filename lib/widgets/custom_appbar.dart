@@ -15,7 +15,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         if (state is SettingsLoading) {
           return AppBar(
             title: Text(
-              'Set a Name for Your Restaurant',
+              '',
               style: Theme.of(context).textTheme.headline2!.copyWith(
                     color: Colors.white,
                   ),
@@ -26,9 +26,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         if (state is SettingsLoaded) {
           return AppBar(
             title: Text(
-              (state.restaurant.name == null)
-                  ? 'Set a Name for Your Restaurant'
-                  : state.restaurant.name!,
+              (state.restaurant.name == null) ? '' : state.restaurant.name!,
               style: Theme.of(context).textTheme.headline2!.copyWith(
                     color: Colors.white,
                   ),

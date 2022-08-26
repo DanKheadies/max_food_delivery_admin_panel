@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 
@@ -24,17 +26,31 @@ class Restaurant extends Equatable {
     this.openingHours,
   });
 
+  // @override
+  // List<Object?> get props => [
+  //       id,
+  //       name,
+  //       imageUrl,
+  //       description,
+  //       tags,
+  //       categories,
+  //       products,
+  //       openingHours,
+  //     ];
+
   @override
-  List<Object?> get props => [
-        id,
-        name,
-        imageUrl,
-        description,
-        tags,
-        categories,
-        products,
-        openingHours,
-      ];
+  List<Object?> get props {
+    return [
+      id,
+      name,
+      imageUrl,
+      description,
+      tags,
+      categories,
+      products,
+      openingHours,
+    ];
+  }
 
   Restaurant copyWith({
     String? id,
@@ -65,17 +81,25 @@ class Restaurant extends Equatable {
       'imageUrl': imageUrl ?? '',
       'description': description ?? '',
       'tags': tags ?? [],
-      'categories': categories!.map((category) {
-        return category.toDocument();
-      }).toList(),
-      'products': products!.map((product) {
-        return product.toDocument();
-      }).toList(),
-      'openingHours': openingHours!.map((openingHours) {
-        return openingHours.toDocument();
-      }).toList(),
+      'categories': categories!.map(
+        (category) {
+          return category.toDocument();
+        },
+      ).toList(),
+      'products': products!.map(
+        (product) {
+          return product.toDocument();
+        },
+      ).toList(),
+      'openingHours': openingHours!.map(
+        (openingHours) {
+          return openingHours.toDocument();
+        },
+      ).toList(),
     };
   }
+
+  String toJson() => json.encode(toDocument());
 
   factory Restaurant.fromSnapshot(DocumentSnapshot snap) {
     return Restaurant(
@@ -83,21 +107,26 @@ class Restaurant extends Equatable {
       name: snap['name'],
       imageUrl: snap['imageUrl'],
       description: snap['description'],
-      tags: (snap['tags'] as List).map((tag) {
-        return tag as String;
-      }).toList(),
-      categories: (snap['categories'] as List).map((category) {
-        return Category.fromSnapshot(category);
-      }).toList(),
-      // categories: Category.categories,
-      products: (snap['products'] as List).map((product) {
-        return Product.fromSnapshot(product);
-      }).toList(),
-      // products: Product.products,
-      openingHours: (snap['openingHours'] as List).map((openingHour) {
-        return OpeningHours.fromSnapshot(openingHour);
-      }).toList(),
-      // openingHours: OpeningHours.openingHoursList,
+      tags: (snap['tags'] as List).map(
+        (tag) {
+          return tag as String;
+        },
+      ).toList(),
+      categories: (snap['categories'] as List).map(
+        (category) {
+          return Category.fromSnapshot(category);
+        },
+      ).toList(),
+      products: (snap['products'] as List).map(
+        (product) {
+          return Product.fromSnapshot(product);
+        },
+      ).toList(),
+      openingHours: (snap['openingHours'] as List).map(
+        (openingHour) {
+          return OpeningHours.fromSnapshot(openingHour);
+        },
+      ).toList(),
     );
   }
 

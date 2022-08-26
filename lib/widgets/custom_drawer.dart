@@ -11,10 +11,10 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Map<String, dynamic> screens = {
-      // 'Dashboard': {
-      //   'routeName': '/dash',
-      //   'icon': const Icon(Icons.dashboard),
-      // },
+      'Dashboard': {
+        'routeName': '/dashboard',
+        'icon': const Icon(Icons.dashboard),
+      },
       'Menu': {
         'routeName': '/menu',
         'icon': const Icon(Icons.menu_book),
@@ -42,7 +42,7 @@ class CustomDrawer extends StatelessWidget {
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     child: Text(
-                      'Your Restaurant Name',
+                      '',
                       style: Theme.of(context).textTheme.headline2!.copyWith(
                             color: Colors.white,
                           ),
@@ -59,7 +59,7 @@ class CustomDrawer extends StatelessWidget {
                     ),
                     child: Text(
                       (state.restaurant.name == null)
-                          ? 'Your Restaurant Name'
+                          ? ''
                           : state.restaurant.name!,
                       style: Theme.of(context).textTheme.headline2!.copyWith(
                             color: Colors.white,

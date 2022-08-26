@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 
 class Category extends Equatable {
@@ -41,7 +42,27 @@ class Category extends Equatable {
     };
   }
 
+  // Map<String, dynamic> toDocument() {
+  //   return {
+  //     'id': id ?? '',
+  //     'name': name ?? '',
+  //     'imageUrl': imageUrl ?? '',
+  //     'description': description ?? '',
+  //     'tags': tags ?? [],
+  //     'categories': categories!.map((category) {
+  //       return category.toDocument();
+  //     }).toList(),
+  //     'products': products!.map((product) {
+  //       return product.toDocument();
+  //     }).toList(),
+  //     'openingHours': openingHours!.map((openingHours) {
+  //       return openingHours.toDocument();
+  //     }).toList(),
+  //   };
+  // }
+
   factory Category.fromSnapshot(Map<String, dynamic> snap) {
+    // factory Category.fromSnapshot(DocumentSnapshot snap) {
     return Category(
       id: snap['id'].toString(),
       name: snap['name'],
