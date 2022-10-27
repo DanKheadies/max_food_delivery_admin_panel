@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'Max Food Delivery Admin Panel',
           theme: theme(),
-          initialRoute: '/menu',
+          initialRoute: '/dashboard',
           routes: {
             '/menu': (context) => const MenuScreen(),
             '/dashboard': (context) => const DashboardScreen(),
